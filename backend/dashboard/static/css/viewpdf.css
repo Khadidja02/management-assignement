@@ -1,0 +1,15 @@
+
+.head-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: brown;
+
+}
+.logo-image{
+    width: 50px !important;
+
+}
+.projectImage{
+    height: 500px;
+}

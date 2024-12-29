@@ -1,0 +1,14 @@
+
+.head-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.logo-image{
+    width: 50px;
+
+}
+.projectImage{
+    height: 300px;
+}

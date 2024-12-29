@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Details</title>
+    <style>
+        .head-details{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: brown;
+
+        }
+        .logo-image{
+            width: 50px !important;
+
+        }
+        .projectImage{
+            height: 300px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class='head-details'>
+    <h1> {{ data.title }} Project</h1>
+    
+    {% if data.image1 %}
+        <img src="{{ data.image1.url }}" alt="Image 1" class='logo-image'>
+    {% endif %}
+    </div>
+    <p><strong>Description</strong></p>
+    <p>{{ data.description }}</p>
+    <p><strong>Start date:</strong>  {{data.start_date}}</p>
+    <p><strong>End date:</strong> {{data.end_date}}</p>
+    <p><strong>Status:</strong> {{data.status}}</p>
+    <p><strong>Priority:</strong> {{data.priority}}</p>
+    <p><strong>Category:</strong> {{data.category}}</p>
+    <p><strong>Project Image:</strong></p>
+    {% if data.image2 %}
+        <img src="{{ data.image2.url }}" alt="Image 2" class='projectImage' >
+    {% endif %}
+</body>
+</html>

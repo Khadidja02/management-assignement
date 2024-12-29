@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .  # The context is set to the root of the project directory
+      dockerfile: backend/dashboard/Dockerfile  # Specify the backend Dockerfile if needed
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/dashboard:/app
+    env_file:
+      - ./backend/dashboard/.env
+    command: python3 manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: .  # Set the build context to the project root
+      dockerfile: my-app/Dockerfile  # Specify the frontend Dockerfile if needed
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./my-app:/app
+    command: npm start

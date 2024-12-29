@@ -1,0 +1,25 @@
+.First-Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.form-project{
+    width: 700px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.float-right{
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: flex-end;     
+
+}
