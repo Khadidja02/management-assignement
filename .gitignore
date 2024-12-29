@@ -1,0 +1,7 @@
+# Ignore specific large files
+backend/dash/Lib/site-packages/torch/lib/torch_cpu.dll
+backend/dash/Lib/site-packages/torch/lib/dnnl.lib
+
+# Ignore all .dll and .lib files
+*.dll
+*.lib
