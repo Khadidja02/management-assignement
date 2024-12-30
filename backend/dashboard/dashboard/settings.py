@@ -33,9 +33,7 @@ SECRET_KEY = 'django-insecure-i6es*%n)ulq@na9newc@f$h_ms@e5$m%$u90lwy&th7ba2h^j-
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 if DEBUG:  # Local development
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-else:
-    ALLOWED_HOSTS = ["management-assignement-backend.onrender.com"]
+    ALLOWED_HOSTS = ["*"]
 
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.google.GoogleOAuth2",
