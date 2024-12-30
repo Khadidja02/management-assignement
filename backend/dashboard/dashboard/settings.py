@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-i6es*%n)ulq@na9newc@f$h_ms@e5$m%$u90lwy&th7ba2h^j-
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOST')
 
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.google.GoogleOAuth2",
