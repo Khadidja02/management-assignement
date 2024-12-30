@@ -31,7 +31,11 @@ SECRET_KEY = 'django-insecure-i6es*%n)ulq@na9newc@f$h_ms@e5$m%$u90lwy&th7ba2h^j-
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
-ALLOWED_HOSTS = ["management-assignement-backend.onrender.com", "management-assignement.onrender.com"]
+
+if DEBUG:  # Local development
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+else:
+    ALLOWED_HOSTS = ["management-assignement-backend.onrender.com"]
 
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.google.GoogleOAuth2",
