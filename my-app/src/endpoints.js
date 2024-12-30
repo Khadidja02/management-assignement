@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const THE_BACKEND_DOMAIN = process.env.THE_BACKEND
+const THE_BACKEND_DOMAIN = process.env.REACT_APP_THE_BACKEND
 
 export const CLIENT_IDS= '559543224720-lpt298m3ppqn3mb4gpda237npc9cm9kq.apps.googleusercontent.com';
 
