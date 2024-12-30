@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-i6es*%n)ulq@na9newc@f$h_ms@e5$m%$u90lwy&th7ba2h^j-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://management-assignement-backend.onrender.com/"]
+ALLOWED_HOSTS = ["https://management-assignement-backend.onrender.com/", "https://management-assignement.onrender.com/"]
 
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.google.GoogleOAuth2",
@@ -84,15 +84,15 @@ CORS_ORIGIN_ALLOW_ALL = True  # For development only; specify origins in product
 CORS_ALLOW_CREDENTIALS = True
 CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']  # Make sure this matches your frontend's domain
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','https://management-assignement.onrender.com']  
 
 
 ROOT_URLCONF = 'dashboard.urls'
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  
+    "http://localhost:3000", "https://management-assignement.onrender.com"  
 ]
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
+    "http://localhost:3000", "https://management-assignement.onrender.com"
 ]
 
 
