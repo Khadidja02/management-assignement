@@ -29,9 +29,9 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-i6es*%n)ulq@na9newc@f$h_ms@e5$m%$u90lwy&th7ba2h^j-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ["https://management-assignement-backend.onrender.com/", "https://management-assignement.onrender.com/"]
+DEBUG = os.getenv("DEBUG", "False") == "True"
+ALLOWED_HOSTS = ["management-assignement-backend.onrender.com", "management-assignement.onrender.com"]
 
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.google.GoogleOAuth2",
